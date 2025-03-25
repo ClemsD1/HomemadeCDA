@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { onMounted } from 'vue'
 import { useUserStore } from './stores/userStore'
-import Navbar from './components/Nav.vue'
+import Nav from './components/Nav.vue'
 
 const userStore = useUserStore()
 
@@ -11,7 +11,7 @@ onMounted(() => {
 </script>
 
 <template>
-  <Navbar v-if="userStore.isLoggedIn()" />
+  <Nav v-if="userStore.isLoggedIn()" />
   <router-view />
 </template>
 
